@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.2'
+gem 'rails', '~> 5.1.4'
 
 # #1
 group :production do
@@ -19,7 +19,12 @@ end
 group :development do
   # Use sqlite3 as the development database for Active Record
   gem 'sqlite3'
-  gem 'web-console', '~> 2.0'
+  gem 'web-console', '~> 3.0'
+end
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0'
+  gem 'rails-controller-testing'
 end
 
 # Use Puma as the app server
@@ -39,6 +44,10 @@ gem 'jbuilder', '~> 2.5'
 gem 'thor', '0.20.0'
 
 gem 'bootstrap-sass'
+
+gem 'devise'
+
+gem 'figaro', '1.0'
 
 group :development do
   gem 'listen', '~> 3.0.5'
