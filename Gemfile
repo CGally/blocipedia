@@ -51,6 +51,8 @@ gem 'devise'
 
 gem 'figaro', '1.0'
 
+gem 'pundit'
+
 group :development do
   gem 'listen', '~> 3.0.5'
 end
