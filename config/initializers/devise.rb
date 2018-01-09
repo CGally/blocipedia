@@ -8,7 +8,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '543c46840993c092216eaea7c68fd426fdf1eefd6ab69175247e67dd012426ae851419db4249e573b1e3c0654e9983cdb1035ce74255ebe08ac910eafdb3bb4b'
+  config.secret_key = '4952f168e2d347f22418829e96be2146606f3325b116bf2ad983916369f58c630e0fe008ab5e9e40781af68dad5d5a9ea95239b1d73e6ed78b22e6fa8c60b2ee'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -200,7 +200,7 @@ Devise.setup do |config|
   # ==> Configuration for :recoverable
   #
   # Defines which key will be used when recovering the password for an account
-  # config.reset_password_keys = [:email]
+  config.reset_password_keys = [:email]
 
   # Time interval you can reset your password with a reset password key.
   # Don't put a too small interval or your users won't have the time to
