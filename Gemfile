@@ -27,6 +27,7 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'shoulda'
   gem 'factory_bot_rails', '~> 4.0'
+  gem 'faker'
 end
 
 # Use Puma as the app server
