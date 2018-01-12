@@ -1,10 +1,6 @@
 class WikisController < ApplicationController
   def index
-    if current_user && (current_user.admin? || current_user.premium?)
-      @wikis = Wiki.all
-    else
-      @wikis = Wiki.where(private: false)
-    end
+    @wikis = policy_scope(Wiki.all)
   end
 
   def show
@@ -30,6 +26,8 @@ end
 
   def edit
     @wiki = Wiki.find(params[:id])
+    @users = User.all
+    @collaborator = Collaborator.new
   end
 
   def update

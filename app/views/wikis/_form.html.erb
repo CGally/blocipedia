@@ -17,4 +17,9 @@
       <% end %>
     </div>
   <% end %>
+  <div class="col-md-12">
+    <% if @wiki.private %>
+      <%= render partial: 'collaborators/form', locals: { wiki: @wiki, collaborators: @collaborators } %>
+    <% end %>
+  </div>
 <% end %>
