@@ -53,11 +53,17 @@ class WikiPolicy < ApplicationPolicy
             wikis << wiki
           end
         end
-      else
+      elsif user.present?
         all_wikis = scope.all
-        wikis = []
         all_wikis.each do |wiki|
           if !wiki.private? || wiki.collaborators.where(user_id: user.id).present?
+            wikis << wiki
+          end
+        end
+      else
+        all_wikis = scope.all
+        all_wikis.each do |wiki|
+          if !wiki.private?
             wikis << wiki
           end
         end
