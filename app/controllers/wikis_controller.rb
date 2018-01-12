@@ -4,7 +4,7 @@ class WikisController < ApplicationController
   end
 
   def show
-    @wiki = Wiki.find(params[:id])
+    @wiki = Wiki.friendly.find(params[:id])
   end
 
   def new
@@ -25,13 +25,13 @@ class WikisController < ApplicationController
 end
 
   def edit
-    @wiki = Wiki.find(params[:id])
+    @wiki = Wiki.friendly.find(params[:id])
     @users = User.all
     @collaborator = Collaborator.new
   end
 
   def update
-    @wiki = Wiki.find(params[:id])
+    @wiki = Wiki.friendly.find(params[:id])
     @wiki.assign_attributes(wiki_params)
 
     if @wiki.save
